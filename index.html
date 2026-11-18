@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Альфа-М — нефтепродукты, углеводородное сырьё и химия оптом</title>
+<meta name="description" content="ООО «Альфа-М»: оптовые поставки нефтепродуктов, углеводородного сырья и химической продукции напрямую с заводов РФ и Китая. Доставка по всей России, включая труднодоступные районы.">
+<meta name="theme-color" content="#15171c">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#15171c;--ink2:#1e2128;--paper:#f2f3f5;--white:#fff;--line:#dcdfe4;--mute:#6b7078;--red:#b3171d;--red2:#d42a2f;--ease:cubic-bezier(.22,1,.36,1);--w:1240px;--g:clamp(16px,4vw,40px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font:400 17px/1.55 "Golos Text",system-ui,sans-serif;color:var(--ink);background:var(--paper);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 var(--g)}
+.mono{font:500 12px/1.4 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+.kick{color:var(--red2);display:flex;gap:10px;align-items:center}
+.kick:before{content:"";width:28px;height:2px;background:currentColor}
+h1,h2,h3{font-family:Unbounded,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(30px,4.6vw,56px)}
+.sec{padding:clamp(72px,10vw,140px) 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:clamp(36px,5vw,64px);flex-wrap:wrap}
+.sec-head h2{margin-top:16px;max-width:780px}
+.sec-head p{max-width:400px;color:var(--mute)}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:12px;height:56px;padding:0 28px;border-radius:2px;font-weight:600;font-size:16px;cursor:pointer;border:0;position:relative;overflow:hidden;isolation:isolate;transition:transform .5s var(--ease),color .4s}
+.btn:after{content:"";position:absolute;inset:0;z-index:-1;transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease)}
+.btn:hover:after{transform:scaleY(1)}
+.btn:active{transform:scale(.97)}
+.btn-red{background:var(--red);color:#fff}.btn-red:after{background:var(--red2)}
+.btn-line{border:1px solid rgba(255,255,255,.35);color:#fff}.btn-line:after{background:#fff}.btn-line:hover{color:var(--ink)}
+.btn svg{width:18px;height:18px;transition:transform .5s var(--ease)}.btn:hover svg{transform:translateX(4px)}
+
+/* loader */
+.curtain{position:fixed;inset:0;z-index:100;background:var(--ink);display:grid;place-items:center;transition:transform 1s var(--ease) .1s}
+.curtain svg{width:84px;opacity:0;animation:logoin 1s var(--ease) forwards}
+.curtain .hex{stroke-dasharray:300;stroke-dashoffset:300;animation:draw 1.1s var(--ease) forwards}
+body.ready .curtain{transform:translateY(-100%)}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes logoin{to{opacity:1}}
+
+/* header */
+.hdr{position:fixed;top:0;left:0;right:0;z-index:50;color:#fff;transition:background .5s,backdrop-filter .5s,transform .5s var(--ease),box-shadow .5s}
+.hdr.solid{background:rgba(21,23,28,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.hdr.hide{transform:translateY(-100%)}
+.hdr .wrap{display:flex;align-items:center;gap:32px;height:80px}
+.logo{display:flex;align-items:center;gap:12px;font:700 15px/1.1 Unbounded,sans-serif}
+.logo svg{width:42px;flex:none}.logo small{display:block;font:400 11px "Golos Text";opacity:.6;margin-top:3px;letter-spacing:.02em}
+.nav{display:flex;gap:28px;margin-left:auto;font-size:15px}
+.nav a{position:relative;opacity:.85;transition:opacity .3s}
+.nav a:after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--red2);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.nav a:hover{opacity:1}.nav a:hover:after{transform:scaleX(1);transform-origin:left}
+.hdr-tel{font-weight:600;white-space:nowrap}
+.hdr-tel small{display:block;font-size:11px;opacity:.55;font-weight:400}
+.burger{display:none;width:44px;height:44px;margin-left:auto;background:none;border:0;cursor:pointer;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:2px;background:#fff;transition:transform .4s var(--ease),opacity .3s}
+.burger i:nth-child(1){top:15px}.burger i:nth-child(2){top:21px}.burger i:nth-child(3){top:27px}
+.menu-open .burger i:nth-child(1){transform:translateY(6px) rotate(45deg)}.menu-open .burger i:nth-child(2){opacity:0}.menu-open .burger i:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;z-index:45;background:var(--ink);color:#fff;padding:110px var(--g) 40px;display:flex;flex-direction:column;gap:6px;clip-path:inset(0 0 100% 0);transition:clip-path .7s var(--ease)}
+.menu-open .mnav{clip-path:inset(0 0 0 0)}
+.mnav a{font:700 26px/1.5 Unbounded;opacity:0;transform:translateY(20px);transition:.6s var(--ease)}
+.menu-open .mnav a{opacity:1;transform:none}
+.mnav .mono{margin-top:auto;opacity:.5}
+
+/* hero */
+.hero{position:relative;min-height:100svh;color:#fff;background:var(--ink);overflow:hidden;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:-6% 0 0;background:url(img/hero.jpg) center 60%/cover;transform:scale(1.18);transition:transform 2.6s var(--ease)}
+body.ready .hero-bg{transform:scale(1.04)}
+.hero:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(21,23,28,.55),rgba(21,23,28,.15) 35%,rgba(21,23,28,.92) 88%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:140px;padding-bottom:48px}
+.hero h1{font-size:clamp(38px,6.2vw,88px);font-weight:800;margin:22px 0 26px;max-width:1100px}
+.line{display:block;overflow:hidden;padding-bottom:.04em}
+.line>span{display:block;transform:translateY(105%);transition:transform 1.2s var(--ease)}
+body.ready .line>span{transform:none}
+.line:nth-child(2)>span{transition-delay:.12s}
+.hero-lead{max-width:620px;font-size:clamp(17px,1.6vw,20px);opacity:.85}
+.hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+body.ready .fade-in{opacity:1;transform:none}
+.d1{transition-delay:.45s!important}.d2{transition-delay:.6s!important}.d3{transition-delay:.8s!important}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(48px,8vh,96px);border-top:1px solid rgba(255,255,255,.18)}
+.stat{padding:22px 24px 0 0}
+.stat b{display:block;font:700 clamp(26px,3.2vw,42px)/1 Unbounded}
+.stat>span{font-size:14px;opacity:.65;display:block;margin-top:8px;max-width:220px}
+.scroll-cue{position:absolute;right:var(--g);bottom:48px;z-index:2;writing-mode:vertical-rl;opacity:.55}
+.scroll-cue:after{content:"";display:block;width:1px;height:60px;background:#fff;margin:14px auto 0;transform-origin:top;animation:cue 2s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ticker */
+.ticker{background:var(--red);color:#fff;overflow:hidden;padding:18px 0;white-space:nowrap}
+.ticker-track{display:inline-flex;gap:48px;animation:tick 48s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:48px}
+.ticker span:after{content:"";width:7px;height:7px;background:#fff;transform:rotate(45deg);opacity:.7}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.img-rv{position:relative;overflow:hidden}
+.img-rv:after{content:"";position:absolute;inset:0;background:var(--paper);transform-origin:top;transition:transform 1.4s var(--ease)}
+.img-rv.in:after{transform:scaleY(0)}
+.img-rv img{transform:scale(1.25);transition:transform 2s var(--ease)}
+.img-rv.in img{transform:scale(1)}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--white);padding:36px 30px 40px;position:relative;overflow:hidden;min-height:300px;display:flex;flex-direction:column}
+.card:before{content:"";position:absolute;left:0;top:0;height:3px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--ease)}
+.card:hover:before{transform:scaleX(1)}
+.card .num{color:var(--mute)}
+.card svg{width:40px;height:40px;margin:34px 0 26px;stroke:var(--red);transition:transform .7s var(--ease)}
+.card:hover svg{transform:translateY(-6px) rotate(-6deg)}
+.card h3{font-size:19px;margin-bottom:12px}
+.card p{color:var(--mute);font-size:15.5px}
+
+/* products */
+.prod{background:var(--white)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+.tab{height:46px;padding:0 20px;border:1px solid var(--line);background:none;border-radius:40px;cursor:pointer;font-weight:500;font-size:15px;display:flex;align-items:center;gap:10px;transition:background .35s,color .35s,border-color .35s}
+.tab em{font:500 11px "JetBrains Mono";font-style:normal;opacity:.55}
+.tab:hover{border-color:var(--ink)}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.plist{display:grid;grid-template-columns:repeat(2,1fr);column-gap:56px}
+.pi{display:grid;grid-template-columns:28px 1fr auto;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);cursor:pointer;position:relative;transition:opacity .45s var(--ease),transform .45s var(--ease)}
+.pi.out{display:none}
+.pi.anim{opacity:0;transform:translateY(14px)}
+.pi .ix{font:500 11px "JetBrains Mono";color:var(--mute)}
+.pi b{font-weight:600;display:block;transition:color .3s,transform .5s var(--ease)}
+.pi small{color:var(--mute);font-size:14px;display:block;margin-top:2px}
+.pi .tag{font:500 12px "JetBrains Mono";background:var(--paper);padding:6px 10px;border-radius:2px;white-space:nowrap;transition:background .35s,color .35s}
+.pi .ask{position:absolute;right:0;top:50%;transform:translate(10px,-50%);opacity:0;color:var(--red);font-weight:600;font-size:14px;transition:.45s var(--ease);background:var(--white);padding-left:14px}
+.pi:hover b{color:var(--red);transform:translateX(6px)}
+.pi:hover .ask{opacity:1;transform:translate(0,-50%)}
+.pi:after{content:"";position:absolute;left:0;bottom:-1px;height:1px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.pi:hover:after{transform:scaleX(1)}
+.grp{grid-column:1/-1;padding:44px 0 10px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink)}
+.grp:first-child{padding-top:0}
+.grp h3{font-size:22px}.grp .mono{color:var(--red)}
+.prod-note{margin-top:44px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:28px 32px;background:var(--paper)}
+.prod-note p{max-width:640px}
+
+/* odorant */
+.odo{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.odo-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(40px,6vw,96px);align-items:start}
+.odo h2 span{color:var(--red2)}
+.odo-lead{opacity:.75;margin:28px 0 36px;max-width:560px}
+.badge{display:flex;gap:16px;align-items:center;border:1px solid rgba(255,255,255,.16);padding:20px 22px;max-width:520px}
+.badge svg{width:36px;flex:none;stroke:var(--red2)}
+.badge b{display:block}.badge .mono{color:var(--red2);margin-top:4px}
+.spec{border-top:1px solid rgba(255,255,255,.16)}
+.spec div{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.spec dt{opacity:.5;font-size:14px}.spec dd{font-weight:500}
+.dl{margin-top:30px;display:inline-flex;align-items:center;gap:14px;color:#fff;font-weight:600}
+.dl i{width:48px;height:48px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:grid;place-items:center;transition:background .4s,border-color .4s}
+.dl:hover i{background:var(--red);border-color:var(--red)}
+.dl svg{width:18px;stroke:#fff}
+.mol{position:absolute;right:-120px;top:-80px;width:520px;opacity:.06;animation:spin 80s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* logistics */
+.logi-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.logi-img{position:relative;aspect-ratio:4/5;overflow:hidden}
+.logi-img img{width:100%;height:115%;object-fit:cover;will-change:transform}
+.modes{margin-top:36px;border-top:1px solid var(--line)}
+.mode{display:flex;gap:20px;align-items:center;padding:22px 0;border-bottom:1px solid var(--line)}
+.mode svg{width:42px;height:42px;stroke:var(--ink);flex:none}
+.mode b{display:block;font-size:18px}.mode span{color:var(--mute);font-size:15px}
+.logi-text p{color:var(--mute);margin-top:22px;max-width:520px}
+
+/* import */
+.imp{background:var(--white)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;gap:24px}
+.steps:before{content:"";position:absolute;top:27px;left:0;right:0;height:2px;background:var(--line)}
+.steps .bar{position:absolute;top:27px;left:0;height:2px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 2.2s var(--ease)}
+.steps.in .bar{transform:scaleX(1)}
+.step{position:relative;padding-top:0}
+.step i{width:56px;height:56px;border-radius:50%;background:var(--white);border:2px solid var(--line);display:grid;place-items:center;font:700 16px Unbounded;font-style:normal;color:var(--mute);transition:border-color .5s,color .5s,background .5s;position:relative}
+.steps.in .step i{border-color:var(--red);color:var(--red)}
+.steps.in .step:nth-child(2) i{transition-delay:.2s}.steps.in .step:nth-child(3) i{transition-delay:.6s}.steps.in .step:nth-child(4) i{transition-delay:1s}.steps.in .step:nth-child(5) i{transition-delay:1.4s}.steps.in .step:nth-child(6) i{transition-delay:1.8s;background:var(--red);color:#fff}
+.step h3{font-size:17px;margin:24px 0 8px}
+.step p{color:var(--mute);font-size:15px}
+
+/* geo */
+.geo{background:var(--ink);color:#fff;overflow:hidden}
+.geo-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(32px,5vw,80px);align-items:center}
+.geo p{opacity:.72;margin-top:22px}
+.reps{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.reps span{border:1px solid rgba(255,255,255,.22);padding:9px 16px;border-radius:40px;font-size:14px}
+.map{position:relative}
+.map img{width:100%;filter:saturate(1.1)}
+.map .pin{position:absolute;width:14px;height:14px;margin:-7px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:ping 2.4s infinite}
+.map .pin b{position:absolute;left:20px;top:-6px;font:500 11px "JetBrains Mono";white-space:nowrap;letter-spacing:.08em;background:var(--ink);padding:3px 7px}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}80%,100%{box-shadow:0 0 0 22px rgba(255,255,255,0)}}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
+.about-img{aspect-ratio:16/11;overflow:hidden}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about p{color:var(--mute);margin-top:20px}
+.req{margin-top:30px;display:grid;grid-template-columns:repeat(3,auto);gap:8px 28px;justify-content:start}
+.req span{color:var(--mute);font-size:13px}.req b{font:500 14px "JetBrains Mono"}
+
+/* contact */
+.contact{background:var(--red);color:#fff;position:relative;overflow:hidden}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,80px)}
+.contact h2{font-size:clamp(30px,4.2vw,52px)}
+.contact .lead{opacity:.85;margin:22px 0 36px;max-width:440px}
+.people{display:grid;gap:22px}
+.person span{opacity:.7;font-size:14px;display:block}
+.person a{font:700 clamp(22px,2.4vw,30px)/1.3 Unbounded;display:inline-block;border-bottom:1px solid transparent;transition:border-color .3s}
+.person a:hover{border-color:#fff}
+.person .em{font:500 15px "Golos Text";opacity:.9}
+.msg{display:flex;gap:10px;margin-top:30px;flex-wrap:wrap}
+.msg a{display:flex;gap:10px;align-items:center;height:50px;padding:0 20px;border:1px solid rgba(255,255,255,.4);border-radius:40px;font-weight:600;font-size:15px;transition:background .35s,color .35s}
+.msg a:hover{background:#fff;color:var(--red)}
+.msg svg{width:20px;height:20px}
+form{background:#fff;color:var(--ink);padding:clamp(24px,3.5vw,44px);display:grid;gap:18px}
+form h3{font-size:22px}
+.f{position:relative}
+.f input,.f select,.f textarea{width:100%;border:0;border-bottom:1px solid var(--line);padding:22px 0 10px;background:none;font-size:16px;outline:none;border-radius:0;transition:border-color .3s}
+.f textarea{resize:vertical;min-height:84px}
+.f select{appearance:none;cursor:pointer}
+.f label{position:absolute;left:0;top:20px;color:var(--mute);pointer-events:none;transition:.3s var(--ease);font-size:16px}
+.f input:focus,.f textarea:focus,.f select:focus{border-color:var(--red)}
+.f input:focus+label,.f input:not(:placeholder-shown)+label,.f textarea:focus+label,.f textarea:not(:placeholder-shown)+label,.f select+label{top:0;font-size:12px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.agree{font-size:13px;color:var(--mute)}
+form .btn{width:100%;justify-content:center}
+
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:56px 0 calc(40px + env(safe-area-inset-bottom));font-size:14px}
+.ft{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:start}
+footer .logo{color:#fff}
+footer a:hover{color:#fff}
+.ft-col{display:grid;gap:6px}
+
+/* floating contacts */
+.fab{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;flex-direction:column-reverse;align-items:flex-end;gap:10px}
+.fab-main{width:64px;height:64px;border-radius:50%;background:var(--red);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 10px 30px rgba(179,23,29,.4);position:relative;transition:transform .5s var(--ease)}
+.fab-main:before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--red);animation:ring 2.6s infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.fab-main svg{width:26px;height:26px;transition:transform .5s var(--ease),opacity .3s;position:absolute}
+.fab-main .x{opacity:0;transform:rotate(-90deg)}
+.fab.open .fab-main .x{opacity:1;transform:none}.fab.open .fab-main .ph{opacity:0;transform:rotate(90deg)}
+.fab.open .fab-main:before{animation:none;opacity:0}
+.fab-item{display:flex;align-items:center;gap:12px;opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:.45s var(--ease)}
+.fab.open .fab-item{opacity:1;transform:none;pointer-events:auto}
+.fab.open .fab-item:nth-child(3){transition-delay:.05s}.fab.open .fab-item:nth-child(4){transition-delay:.1s}.fab.open .fab-item:nth-child(5){transition-delay:.15s}
+.fab-item span{background:var(--ink);color:#fff;font-size:13px;font-weight:500;padding:7px 12px;border-radius:4px;white-space:nowrap}
+.fab-item i{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .3s var(--ease)}
+.fab-item:hover i{transform:scale(1.08)}
+.fab-item svg{width:22px;height:22px}
+.mbar{display:none}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:16px;pointer-events:none}
+.modal .bg{position:absolute;inset:0;background:rgba(21,23,28,.6);backdrop-filter:blur(4px);opacity:0;transition:opacity .5s}
+.modal form{position:relative;width:min(520px,100%);opacity:0;transform:translateY(30px) scale(.98);transition:.6s var(--ease)}
+.modal.on{pointer-events:auto}.modal.on .bg{opacity:1}.modal.on form{opacity:1;transform:none}
+.close{position:absolute;right:14px;top:14px;width:40px;height:40px;border:0;background:var(--paper);border-radius:50%;cursor:pointer;font-size:22px;line-height:1;transition:transform .4s var(--ease)}
+.close:hover{transform:rotate(90deg)}
+.toast{visibility:hidden;position:fixed;left:50%;bottom:30px;z-index:90;transform:translate(-50%,140%);background:var(--ink);color:#fff;padding:16px 22px;border-left:3px solid var(--red2);transition:transform .6s var(--ease);max-width:calc(100% - 32px)}
+.toast.on{transform:translate(-50%,0);visibility:visible}
+
+@media(max-width:1080px){.nav,.hdr-tel{display:none}.burger{display:block}.cards{grid-template-columns:1fr 1fr}.odo-grid,.logi-grid,.geo-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.logi-img{aspect-ratio:16/11}.steps{grid-template-columns:1fr;gap:0}.steps:before,.steps .bar{top:0;bottom:0;left:27px;width:2px;height:auto;right:auto}.steps .bar{transform:scaleY(0);transform-origin:top}.steps.in .bar{transform:scaleY(1)}.step{display:grid;grid-template-columns:56px 1fr;gap:0 20px;padding-bottom:28px}.step h3{margin:14px 0 4px}.step p{grid-column:2}}
+@media(max-width:760px){body{font-size:16px}.hdr .wrap{height:66px}.stats{grid-template-columns:1fr 1fr}.stat{padding:18px 12px 4px 0}.scroll-cue{display:none}.cards{grid-template-columns:1fr}.card{min-height:0}.card svg{margin:22px 0 18px}.plist{grid-template-columns:1fr}.pi .ask{display:none}.pi{grid-template-columns:24px 1fr}.pi .tag{grid-column:2;justify-self:start}.pi>span:empty{display:none}.spec div{grid-template-columns:1fr;gap:4px}.req{grid-template-columns:1fr 1fr}.f2{grid-template-columns:1fr}.fab{display:none}
+.mbar{display:grid;grid-template-columns:1fr 1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px;transform:translateY(110%);transition:transform .5s var(--ease)}
+.mbar.on{transform:none}
+.mbar a{height:48px;display:flex;align-items:center;justify-content:center;gap:8px;color:#fff;font-weight:600;font-size:14px;border-radius:4px;background:var(--ink2)}
+.mbar a.r{background:var(--red)}.mbar svg{width:19px;height:19px}
+footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+.hero .wrap{padding-bottom:32px}.hero-cta{flex-direction:column}.hero-cta .btn{justify-content:center;white-space:nowrap}}
+@media(hover:none){.pi .ask{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition-duration:.01s!important;transition-delay:0s!important}.rv,.fade-in{opacity:1;transform:none}.img-rv:after{display:none}}
+</style>
+</head>
+<body>
+<div class="curtain" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path class="hex" d="M50 8 86 29v42L50 92 14 71V29z" stroke="#fff" stroke-width="3"/><text x="50" y="62" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="34" fill="#d42a2f">α</text></svg></div>
+
+<header class="hdr" id="hdr"><div class="wrap">
+ <a href="#top" class="logo" aria-label="Альфа-М"><svg viewBox="0 0 64 64" fill="none"><path d="M28 6 50 18.5v25L28 56 6 43.5v-25z" stroke="currentColor" stroke-width="2.4"/><path d="M13 22.5v17M28 50 43 41.5M43 22.5 28 14" stroke="currentColor" stroke-width="1.6" opacity=".55"/><path d="M50 43.5 58 48" stroke="currentColor" stroke-width="2.4"/><text x="28" y="38" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="20" fill="#d42a2f">α</text><text x="58" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#d42a2f">μ</text></svg><span>АЛЬФА-М<small>Оптовые поставки по всей России</small></span></a>
+ <nav class="nav"><a href="#products">Продукция</a><a href="#odorant">Одорант</a><a href="#logistics">Логистика</a><a href="#import">Импорт из Китая</a><a href="#about">О компании</a><a href="#contacts">Контакты</a></nav>
+ <a class="hdr-tel" href="tel:+79174302517">+7 (917) 430-25-17<small>alpha_m@list.ru</small></a>
+ <button class="burger" id="burger" aria-label="Меню"><i></i><i></i><i></i></button>
+</div></header>
+<nav class="mnav" id="mnav"><a href="#products">Продукция</a><a href="#odorant">Одорант</a><a href="#logistics">Логистика</a><a href="#import">Импорт из Китая</a><a href="#about">О компании</a><a href="#contacts">Контакты</a><span class="mono">+7 (917) 430-25-17 · alpha_m@list.ru</span></nav>
+
+<main id="top">
+<section class="hero">
+ <div class="hero-bg" id="heroBg"></div>
+ <div class="wrap">
+  <div class="mono kick fade-in">Нефтепродукты · Углеводородное сырьё · Химия</div>
+  <h1><span class="line"><span>С завода — прямо</span></span><span class="line"><span>на ваш объект</span></span></h1>
+  <p class="hero-lead fade-in d1">Оптовые поставки химической продукции и нефтепродуктов промышленным предприятиям по всей России. Работаем напрямую с заводами-изготовителями РФ и Китая.</p>
+  <div class="hero-cta fade-in d2"><a href="#contacts" class="btn btn-red" data-ask>Запросить цену <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a href="#products" class="btn btn-line">Каталог продукции</a></div>
+  <div class="stats fade-in d3">
+   <div class="stat"><b><span data-count="20">0</span> 000+ т</b><span>химических реагентов поставлено за 2023 год</span></div>
+   <div class="stat"><b data-count="28">0</b><span>позиций в каталоге — топливо, сырьё, химия</span></div>
+   <div class="stat"><b data-count="3">0</b><span>вида транспорта: авто, ж/д, танк-контейнеры</span></div>
+   <div class="stat"><b>РФ + КНР</b><span>прямые поставки с заводов без посредников</span></div>
+  </div>
+ </div>
+ <div class="scroll-cue mono">Листайте</div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track mono" id="ticker"></div></div>
+
+<section class="sec" id="services"><div class="wrap">
+ <div class="sec-head rv"><div><div class="mono kick">01 · Что мы делаем</div><h2>Поставка под ключ — от завода до вашего склада</h2></div><p>Берём на себя подбор продукта, закупку, логистику и документы. Вы получаете груз и полный пакет бумаг.</p></div>
+ <div class="cards">
+  <div class="card rv"><span class="mono num">01</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 21V10l5 3V10l5 3V10l5 3V4h3v17z"/><path d="M7 17h2M12 17h2M17 17h2"/></svg><h3>Напрямую с заводов РФ</h3><p>Работаем с ведущими заводами-изготовителями без посредников — стабильное качество и честная цена.</p></div>
+  <div class="card rv"><span class="mono num">02</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="m2 20 7-12 4 6 3-4 6 10z"/><path d="M17 3v4M15 5h4"/></svg><h3>Труднодоступные районы</h3><p>Организуем доставку в удалённые регионы, включая зимний завоз, доставку по зимникам и северные территории.</p></div>
+  <div class="card rv"><span class="mono num">03</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><h3>Логистика — отдельной услугой</h3><p>Возьмём на себя доставку вашего груза: подберём маршрут и транспорт, доставим до склада.</p></div>
+  <div class="card rv"><span class="mono num">04</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 2h9l4 4v16H6z"/><path d="M14 2v5h5M9 14l2 2 4-4"/></svg><h3>Полный пакет документов</h3><p>Каждая партия — с паспортом качества и паспортом безопасности. Точный расчёт с учётом транспорта и налогов.</p></div>
+ </div>
+</div></section>
+
+<section class="sec prod" id="products"><div class="wrap">
+ <div class="sec-head rv"><div><div class="mono kick">02 · Продукция</div><h2>Перечень продукции</h2></div><p>Оптовые партии, отгрузка напрямую с заводов-изготовителей. Нажмите на позицию, чтобы запросить цену.</p></div>
+ <div class="tabs rv" id="tabs"><button class="tab on" data-f="all">Все <em>28</em></button><button class="tab" data-f="oil">Нефтепродукты <em>12</em></button><button class="tab" data-f="chem">Химическая продукция <em>5</em></button><button class="tab" data-f="raw">Углеводородное сырьё <em>11</em></button></div>
+ <div class="plist" id="plist"></div>
+ <div class="prod-note rv"><p><b>Нет нужной позиции?</b> Привезём под ваш запрос — в том числе из Китая. Цены, объёмы и условия — по запросу, подготовим коммерческое предложение под вашу задачу.</p><a href="#contacts" class="btn btn-red" data-ask>Получить КП <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<section class="sec odo" id="odorant">
+ <svg class="mol" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="1.5"><path d="M100 20 169 60v80l-69 40-69-40V60z"/><path d="M100 50 143 75v50l-43 25-43-25V75z"/><circle cx="100" cy="20" r="6"/><circle cx="169" cy="60" r="6"/><circle cx="169" cy="140" r="6"/><circle cx="100" cy="180" r="6"/><circle cx="31" cy="140" r="6"/><circle cx="31" cy="60" r="6"/></svg>
+ <div class="wrap odo-grid">
+  <div class="rv">
+   <div class="mono kick">03 · Собственная разработка</div>
+   <h2 style="margin-top:16px">Одорант природный <span>«Альфа-М»</span></h2>
+   <p class="odo-lead">Одоризация — введение в поток газа небольшого количества жидкого одоранта, чтобы придать газу резкий запах и своевременно обнаруживать утечки. Одорант «Альфа-М» — смесь природных меркаптанов: бесцветная летучая жидкость с очень резким «сернистым» запахом. Даёт стабильный, ярко выраженный запах и полностью растворяется в газе — от магистрали до конечного потребителя.</p>
+   <div class="badge"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><div><b>Успешно прошёл испытания на ГРС ПАО «Газпром»</b><div class="mono">Рекомендован к применению</div></div></div>
+  </div>
+  <div class="rv">
+   <dl class="spec">
+    <div><dt>ТУ</dt><dd>20.14.51-001-47000272-2026</dd></div>
+    <div><dt>Происхождение</dt><dd>Собственная разработка компании «Альфа-М»</dd></div>
+    <div><dt>Испытания</dt><dd>Испытан на действующих газораспределительных сетях, допущен к применению</dd></div>
+    <div><dt>Дозировка</dt><dd>18 г на 1000 м³ газа — норма для стабильной интенсивности запаха</dd></div>
+    <div><dt>Тара</dt><dd>Металлические бочки по 160 кг</dd></div>
+   </dl>
+   <a class="dl" href="img/sds.pdf" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 4v12M6 11l6 6 6-6M4 21h16"/></svg></i>Скачать паспорт безопасности (PDF)</a>
+  </div>
+ </div>
+</section>
+
+<section class="sec" id="logistics"><div class="wrap logi-grid">
+ <div class="logi-img img-rv"><img src="img/rail.jpg" alt="Ж/д цистерны" loading="lazy" data-par></div>
+ <div class="logi-text rv">
+  <div class="mono kick">04 · Логистика</div>
+  <h2 style="margin-top:16px">Доставка любой сложности</h2>
+  <p>Подбираем маршрут и транспорт под объём и сроки. Вы заранее знаете точную сумму поставки с учётом транспортных расходов и налогов.</p>
+  <div class="modes">
+   <div class="mode"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg><div><b>Автотранспорт и автоцистерны</b><span>Оперативно, «от двери до двери»</span></div></div>
+   <div class="mode"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="5" width="18" height="9" rx="4.5"/><path d="M2 18h20M7 14v4M17 14v4M12 5V3"/></svg><div><b>Ж/д цистерны</b><span>Крупные партии по всей сети РЖД</span></div></div>
+   <div class="mode"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="2" y="5" width="20" height="14"/><path d="m2 5 20 14M22 5 2 19"/></svg><div><b>Танк-контейнеры</b><span>Мультимодальные перевозки и импорт</span></div></div>
+  </div>
+ </div>
+</div></section>
+
+<section class="sec imp" id="import"><div class="wrap">
+ <div class="sec-head rv"><div><div class="mono kick">05 · Импорт из Китая</div><h2>Привезём под ваш запрос — под ключ</h2></div><p>Закупаем напрямую у заводов КНР, берём на себя логистику и таможенное оформление.</p></div>
+ <div class="steps" id="steps"><div class="bar"></div>
+  <div class="step"><i>01</i><h3>Ваш запрос</h3><p>Продукт, объём, требования</p></div>
+  <div class="step"><i>02</i><h3>Закупка на заводе</h3><p>Напрямую, без посредников</p></div>
+  <div class="step"><i>03</i><h3>Доставка</h3><p>Из Китая в Россию</p></div>
+  <div class="step"><i>04</i><h3>Растаможка</h3><p>Оформление и документы</p></div>
+  <div class="step"><i>05</i><h3>На ваш склад</h3><p>В любой регион РФ</p></div>
+ </div>
+</div></section>
+
+<section class="sec geo"><div class="wrap geo-grid">
+ <div class="rv">
+  <div class="mono kick">06 · География</div>
+  <h2 style="margin-top:16px">Работаем по всей России</h2>
+  <p>Прямые поставки качественных нефтепродуктов от заводов-изготовителей в любой регион. Представительства за рубежом помогают с подбором, банковскими расчётами и ввозом продукции иностранного производства.</p>
+  <div class="reps"><span>ОАЭ</span><span>Турция</span><span>Казахстан</span><span>Кыргызстан</span><span>Китай</span></div>
+ </div>
+ <div class="map rv"><img src="img/map.webp" alt="Карта поставок по России" loading="lazy"><span class="pin" style="left:24.5%;top:57%"><b>УФА</b></span></div>
+</div></section>
+
+<section class="sec about" id="about"><div class="wrap about-grid">
+ <div class="rv">
+  <div class="mono kick">07 · О компании</div>
+  <h2 style="margin-top:16px">ООО «Альфа-М»</h2>
+  <p>Поставляем широкую номенклатуру химической продукции и нефтепродуктов. Сотрудничество с научно-техническими центрами, собственные запатентованные разработки и представительства в ОАЭ, Турции, Казахстане и Кыргызстане позволяют решать задачи по подбору, расчётам и ввозу в Россию продукции иностранного производства.</p>
+  <p>Более 20 тысяч тонн химических реагентов по итогам 2023 года. Опыт поставок в труднодоступные регионы, зимний завоз, доставка по зимникам.</p>
+  <div class="req"><span>ИНН / КПП</span><span>ОГРН</span><span>Адрес</span><b>0274956790 / 027401001</b><b>1200200027202</b><b>Уфа, ул. Гафури, 6</b></div>
+ </div>
+ <div class="about-img img-rv"><img src="img/plant.jpg" alt="Нефтеперерабатывающий завод" loading="lazy"></div>
+</div></section>
+
+<section class="sec contact" id="contacts"><div class="wrap contact-grid">
+ <div class="rv">
+  <div class="mono kick" style="color:#fff">08 · Контакты</div>
+  <h2 style="margin-top:16px">Цены, объёмы и условия — по запросу</h2>
+  <p class="lead">Оставьте заявку или позвоните — подготовим коммерческое предложение под вашу задачу.</p>
+  <div class="people">
+   <div class="person"><span>Офис</span><a href="tel:+79174302517">+7 (917) 430-25-17</a><br><a class="em" href="mailto:alpha_m@list.ru">alpha_m@list.ru</a></div>
+   <div class="person"><span>Исаев Семён Сергеевич, отдел продаж</span><a href="tel:+79196040180">+7 (919) 604-01-80</a><br><a class="em" href="mailto:s.isaev.alpha_m@mail.ru">s.isaev.alpha_m@mail.ru</a></div>
+  </div>
+  <div class="msg">
+   <a href="https://wa.me/79174302517" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>WhatsApp</a>
+   <a href="https://t.me/+79174302517" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.7c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.8-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.3-1.5zM9 13.5l9.4-5.9c.4-.3.8-.1.5.2l-8 7.3-.3 3.4z"/></svg>Telegram</a>
+   <a href="mailto:alpha_m@list.ru"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>Почта</a>
+  </div>
+ </div>
+ <form class="rv" id="form" novalidate>
+  <h3>Заявка на консультацию</h3>
+  <div class="f"><input id="fn" placeholder=" " required><label for="fn">Имя и компания</label></div>
+  <div class="f2"><div class="f"><input id="fp" type="tel" placeholder=" " required inputmode="tel"><label for="fp">Телефон</label></div><div class="f"><input id="fv" placeholder=" "><label for="fv">Объём, т</label></div></div>
+  <div class="f"><select id="fprod"><option value="">Выберите из каталога</option></select><label for="fprod">Продукт</label></div>
+  <div class="f"><textarea id="fc" placeholder=" "></textarea><label for="fc">Регион доставки, комментарий</label></div>
+  <button class="btn btn-red" type="submit">Отправить заявку <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  <p class="agree">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных</p>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="wrap ft">
+ <a href="#top" class="logo"><svg viewBox="0 0 64 64" fill="none"><path d="M28 6 50 18.5v25L28 56 6 43.5v-25z" stroke="currentColor" stroke-width="2.4"/><text x="28" y="38" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="20" fill="#d42a2f">α</text><text x="58" y="60" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#d42a2f">μ</text></svg><span>АЛЬФА-М<small>Нефтепродукты и нефтехимия оптом</small></span></a>
+ <div class="ft-col"><a href="tel:+79174302517">+7 (917) 430-25-17</a><a href="mailto:alpha_m@list.ru">alpha_m@list.ru</a><span>450093, г. Уфа, ул. Мажита Гафури, д. 6</span></div>
+ <div class="ft-col"><span>ООО «Альфа-М»</span><span>ИНН 0274956790 · КПП 027401001</span><span>ОГРН 1200200027202</span></div>
+</div></footer>
+
+<div class="fab" id="fab">
+ <button class="fab-main" id="fabBtn" aria-label="Связаться"><svg class="ph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+ <a class="fab-item" href="tel:+79174302517"><span>Позвонить</span><i style="background:#15171c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></i></a>
+ <a class="fab-item" href="https://wa.me/79174302517" target="_blank" rel="noopener"><span>WhatsApp</span><i style="background:#25d366"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></i></a>
+ <a class="fab-item" href="https://t.me/+79174302517" target="_blank" rel="noopener"><span>Telegram</span><i style="background:#2aabee"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.4 3.6 2.9 10.7c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.9.8.4 0 .6-.2.8-.4l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.6c.3-1.3-.5-1.9-1.3-1.5zM9 13.5l9.4-5.9c.4-.3.8-.1.5.2l-8 7.3-.3 3.4z"/></svg></i></a>
+ <a class="fab-item" href="mailto:alpha_m@list.ru"><span>Написать на почту</span><i style="background:#b3171d"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg></i></a>
+</div>
+<div class="mbar" id="mbar">
+ <a href="tel:+79174302517"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Звонок</a>
+ <a href="https://wa.me/79174302517" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>WhatsApp</a>
+ <a href="#" class="r" data-ask>Запросить цену</a>
+</div>
+
+<div class="modal" id="modal"><div class="bg" data-close></div>
+ <form id="mform" novalidate><button type="button" class="close" data-close aria-label="Закрыть">×</button>
+  <h3>Запрос цены</h3><p class="agree" id="mprod" style="font-size:15px;color:var(--ink)"></p>
+  <div class="f"><input id="mn" placeholder=" " required><label for="mn">Имя и компания</label></div>
+  <div class="f"><input id="mp" type="tel" placeholder=" " required inputmode="tel"><label for="mp">Телефон</label></div>
+  <div class="f"><input id="mv" placeholder=" "><label for="mv">Объём и регион доставки</label></div>
+  <button class="btn btn-red" type="submit">Получить предложение</button>
+  <p class="agree">Нажимая на кнопку, вы соглашаетесь с обработкой персональных данных</p>
+ </form>
+</div>
+<div class="toast" id="toast">Спасибо! Заявка принята — менеджер свяжется с вами в рабочее время.</div>
+
+<script>
+const P=[
+['oil','Бензин','АИ-92 · АИ-95 · АИ-98 · АИ-100',''],
+['oil','Дизельное топливо летнее','','ДТ-Л'],
+['oil','Дизельное топливо зимнее','','ДТ-З'],
+['oil','Дизельное топливо межсезонное','','ДТ-Е'],
+['oil','Дизельное топливо арктическое','','ДТ-А'],
+['oil','Дистиллят газового конденсата','высокосернистое дизельное топливо','ДГКС'],
+['oil','Мазут топочный','содержание серы менее 3,5%','марка 100'],
+['oil','Масла индустриальные','','И-20, И-40'],
+['oil','Битумы нефтяные','','дорожные, кровельные'],
+['chem','Метанол технический','ГОСТ 2222-95','марка А'],
+['chem','Метанол технический','','марка А1'],
+['chem','Ацетон технический','ГОСТ 2768-84',''],
+['chem','Толуол нефтяной','ГОСТ 14710-78','растворитель'],
+['chem','Эфир метил-трет-бутиловый','марка А','МТБЭ'],
+['raw','Конденсат газовый стабильный','1 группа, ГОСТ Р 54389-2011','Сосногорский ГПЗ'],
+['raw','Конденсат газовый стабильный','1 группа, ГОСТ Р 54389-2011','Сургутский ЗСК'],
+['raw','Конденсат газовый стабильный','2 группа, ГОСТ Р 54389-2011','Астраханский ГПЗ'],
+['raw','Бензин газовый стабильный','','БГС'],
+['raw','Фракция изопентановая','','марка А'],
+['raw','Пентан-гексановая фракция','','Амурский ГПЗ'],
+['raw','Пентан-гексановая фракция','','Оренбургский ГЗ'],
+['raw','Дистиллят газового конденсата','',''],
+['raw','Абсорбент олигомеризат','',''],
+['raw','Широкая фракция лёгких углеводородов','','ШФЛУ'],
+['raw','Высокооктановые компоненты для производства бензина','','']];
+const G={oil:['Нефтепродукты',12],chem:['Химическая продукция',5],raw:['Углеводородное сырьё',11]};
+const L=document.getElementById('plist'),sel=document.getElementById('fprod');let h='',n=0,last='';
+P.forEach(p=>{if(p[0]!==last){last=p[0];n=0;h+=`<div class="grp" data-g="${p[0]}"><h3>${G[p[0]][0]}</h3><span class="mono">${G[p[0]][1]} позиций</span></div>`}n++;
+ const name=p[1]+(p[3]?' '+p[3]:'');
+ h+=`<div class="pi" data-g="${p[0]}" data-name="${name}" tabindex="0" role="button"><span class="ix">${String(n).padStart(2,'0')}</span><div><b>${p[1]}</b>${p[2]?`<small>${p[2]}</small>`:''}</div>${p[3]?`<span class="tag">${p[3]}</span>`:'<span></span>'}<span class="ask">Запросить цену →</span></div>`;
+ sel.insertAdjacentHTML('beforeend',`<option>${name}</option>`)});
+L.innerHTML=h;
+document.getElementById('ticker').innerHTML=(t=>t+t)([...new Set(P.map(p=>p[1]+(p[3]&&p[3].length<12?' '+p[3]:'')))].map(s=>`<span>${s}</span>`).join(''));
+
+// tabs
+document.getElementById('tabs').addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;
+ document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t===b));const f=b.dataset.f;
+ const items=[...L.children];items.forEach(el=>{const show=f==='all'||el.dataset.g===f;el.classList.toggle('out',!show);if(show&&el.classList.contains('pi'))el.classList.add('anim')});
+ let k=0;requestAnimationFrame(()=>items.filter(el=>!el.classList.contains('out')&&el.classList.contains('pi')).forEach(el=>{setTimeout(()=>el.classList.remove('anim'),k++*28)}));
+ if(f!=='all')L.querySelectorAll('.grp').forEach(g=>g.classList.add('out'));});
+
+// modal
+const M=document.getElementById('modal'),mprod=document.getElementById('mprod');
+function openM(name){mprod.textContent=name?'Позиция: '+name:'Укажите, что нужно — подготовим КП';M.classList.add('on');setTimeout(()=>document.getElementById('mn').focus({preventScroll:true}),400)}
+L.addEventListener('click',e=>{const p=e.target.closest('.pi');if(p)openM(p.dataset.name)});
+L.addEventListener('keydown',e=>{const p=e.target.closest('.pi');if(p&&(e.key==='Enter'||e.key===' ')){e.preventDefault();openM(p.dataset.name)}});
+document.querySelectorAll('[data-ask]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();openM('')}));
+M.addEventListener('click',e=>{if(e.target.closest('[data-close]'))M.classList.remove('on')});
+addEventListener('keydown',e=>{if(e.key==='Escape')M.classList.remove('on')});
+const toast=document.getElementById('toast');
+function sent(f){const req=[...f.querySelectorAll('[required]')];const bad=req.filter(i=>!i.value.trim());req.forEach(i=>i.style.borderColor=bad.includes(i)?'#d42a2f':'');if(bad.length){bad[0].focus();return}
+ f.reset();M.classList.remove('on');toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),4200)}
+['form','mform'].forEach(id=>document.getElementById(id).addEventListener('submit',e=>{e.preventDefault();sent(e.target)}));
+
+// fab, menu
+const fab=document.getElementById('fab');document.getElementById('fabBtn').onclick=()=>fab.classList.toggle('open');
+document.addEventListener('click',e=>{if(!e.target.closest('#fab'))fab.classList.remove('open')});
+document.getElementById('burger').onclick=()=>document.body.classList.toggle('menu-open');
+document.querySelectorAll('.mnav a').forEach((a,i)=>{a.style.transitionDelay=(.15+i*.05)+'s';a.onclick=()=>document.body.classList.remove('menu-open')});
+
+// header + parallax + mobile bar
+const hdr=document.getElementById('hdr'),bg=document.getElementById('heroBg'),mbar=document.getElementById('mbar'),par=document.querySelectorAll('[data-par]');let ly=0,tk=false;
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function onS(){const y=scrollY;hdr.classList.toggle('solid',y>40);hdr.classList.toggle('hide',y>ly&&y>500&&!document.body.classList.contains('menu-open'));ly=y;mbar.classList.toggle('on',y>innerHeight*.6);
+ if(!RM){if(y<innerHeight)bg.style.translate='0 '+(y*.3)+'px';par.forEach(im=>{const r=im.parentNode.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)im.style.transform='translateY('+(-(r.top+r.height/2-innerHeight/2)*.12-r.height*.07)+'px)'})}tk=false}
+addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});onS();
+
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15,rootMargin:'0px 0px -6% 0px'});
+document.querySelectorAll('.rv,.img-rv,#steps').forEach((el,i)=>{if(el.parentNode.classList.contains('cards'))el.style.transitionDelay=([...el.parentNode.children].indexOf(el)*.1)+'s';io.observe(el)});
+function count(){document.querySelectorAll('[data-count]').forEach(el=>{const to=+el.dataset.count,t0=performance.now(),d=1600;(function f(t){const k=Math.min(1,(t-t0)/d);el.textContent=Math.round(to*(1-Math.pow(1-k,4)));if(k<1)requestAnimationFrame(f)})(t0)})}
+addEventListener('load',()=>{setTimeout(()=>{document.body.classList.add('ready');setTimeout(count,900);setTimeout(()=>document.querySelector('.curtain').remove(),1400)},RM?0:700)});
+setTimeout(()=>document.body.classList.add('ready'),3500);
+</script>
+</body>
+</html>
