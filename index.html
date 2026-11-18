@@ -129,7 +129,7 @@ body.ready .fade-in{opacity:1;transform:none}
 .pi.anim{opacity:0;transform:translateY(14px)}
 .pi .ix{font:500 11px "JetBrains Mono";color:var(--mute)}
 .pi b{font-weight:600;display:block;transition:color .3s,transform .5s var(--ease)}
-.pi small{color:var(--mute);font-size:14px;display:block;margin-top:2px}
+.pi small{color:var(--mute);font-size:14px;display:block;margin-top:4px;line-height:1.5}
 .pi .tag{font:500 12px "JetBrains Mono";background:var(--paper);padding:6px 10px;border-radius:2px;white-space:nowrap;transition:background .35s,color .35s}
 .pi .ask{position:absolute;right:0;top:50%;transform:translate(10px,-50%);opacity:0;color:var(--red);font-weight:600;font-size:14px;transition:.45s var(--ease);background:var(--white);padding-left:14px}
 .pi:hover b{color:var(--red);transform:translateX(6px)}
@@ -153,10 +153,6 @@ body.ready .fade-in{opacity:1;transform:none}
 .spec{border-top:1px solid rgba(255,255,255,.16)}
 .spec div{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.16)}
 .spec dt{opacity:.5;font-size:14px}.spec dd{font-weight:500}
-.dl{margin-top:30px;display:inline-flex;align-items:center;gap:14px;color:#fff;font-weight:600}
-.dl i{width:48px;height:48px;border:1px solid rgba(255,255,255,.3);border-radius:50%;display:grid;place-items:center;transition:background .4s,border-color .4s}
-.dl:hover i{background:var(--red);border-color:var(--red)}
-.dl svg{width:18px;stroke:#fff}
 .mol{position:absolute;right:-120px;top:-80px;width:520px;opacity:.06;animation:spin 80s linear infinite;pointer-events:none}
 @keyframes spin{to{transform:rotate(360deg)}}
 
@@ -337,11 +333,10 @@ footer{padding-bottom:calc(100px + env(safe-area-inset-bottom))}
    <dl class="spec">
     <div><dt>ТУ</dt><dd>20.14.51-001-47000272-2026</dd></div>
     <div><dt>Происхождение</dt><dd>Собственная разработка компании «Альфа-М»</dd></div>
-    <div><dt>Испытания</dt><dd>Испытан на действующих газораспределительных сетях, допущен к применению</dd></div>
+    <div><dt>Испытания</dt><dd>Успешно испытан на ПАО «Газпром» и допущен к применению</dd></div>
     <div><dt>Дозировка</dt><dd>18 г на 1000 м³ газа — норма для стабильной интенсивности запаха</dd></div>
     <div><dt>Тара</dt><dd>Металлические бочки по 160 кг</dd></div>
    </dl>
-   <a class="dl" href="img/sds.pdf" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 4v12M6 11l6 6 6-6M4 21h16"/></svg></i>Скачать паспорт безопасности (PDF)</a>
   </div>
  </div>
 </section>
@@ -466,13 +461,10 @@ const P=[
 ['chem','Ацетон технический','ГОСТ 2768-84',''],
 ['chem','Толуол нефтяной','ГОСТ 14710-78','растворитель'],
 ['chem','Эфир метил-трет-бутиловый','марка А','МТБЭ'],
-['raw','Конденсат газовый стабильный','1 группа, ГОСТ Р 54389-2011','Сосногорский ГПЗ'],
-['raw','Конденсат газовый стабильный','1 группа, ГОСТ Р 54389-2011','Сургутский ЗСК'],
-['raw','Конденсат газовый стабильный','2 группа, ГОСТ Р 54389-2011','Астраханский ГПЗ'],
+['raw','Конденсат газовый стабильный','Сосногорский ГПЗ<br>Сургутский ЗСК<br>Астраханский ГПЗ','КГС'],
 ['raw','Бензин газовый стабильный','','БГС'],
 ['raw','Фракция изопентановая','','марка А'],
-['raw','Пентан-гексановая фракция','','Амурский ГПЗ'],
-['raw','Пентан-гексановая фракция','','Оренбургский ГЗ'],
+['raw','Пентан-гексановая фракция','Амурский ГПЗ<br>Оренбургский ГЗ','ПГФ'],
 ['raw','Дистиллят газового конденсата','',''],
 ['raw','Абсорбент олигомеризат','',''],
 ['raw','Широкая фракция лёгких углеводородов','','ШФЛУ'],
